@@ -6,8 +6,10 @@
     {{-- @if (count($tasks)) --}}
     @forelse ($tasks as $task)
         <div>
-            @@ -12,4 +12,4 @@
-            <div>There are no tasks!</div>
+            <a href="{{ route('tasks.show', ['id' => $task->id]) }}">{{ $task->title }}</a>
+        </div>
+    @empty
+        <div>There are no tasks!</div>
     @endforelse
     {{-- @endif --}}
 @endsection
