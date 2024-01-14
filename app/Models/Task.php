@@ -20,4 +20,6 @@ class Task extends Model
         'long_description',
         'completed',
     ];
+
+    // protected $guarded = ['secret'];
 }
