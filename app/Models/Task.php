@@ -21,5 +21,9 @@ class Task extends Model
         'completed',
     ];
 
-    // protected $guarded = ['secret'];
+    public function toggleComplete()
+    {
+        $this->completed = !$this->completed;
+        $this->save();
+    }
 }
